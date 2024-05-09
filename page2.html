@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candy Page</title>
+    <link rel="stylesheet" href="page2.css">
+ </head>
+<body class="container"> 
+    <div class="container">
+        <img class="background" src="사탕배경.png" alt="background">
+        <div class="candy-wrapper" id="clover"> 
+        <img id="clover" class="clover" src="행복사탕.png" alt="clover">
+       </div>
+       <div class="candy-wrapper" id="fish">
+       <img id="fish" class="fish" src="물고기사탕.png" alt="fish"></div>
+       <div class="candy-wrapper" id="tree">
+       <img id="tree" class="tree" src="생명나무사탕.png" alt="tree"></div>
+       <div class="candy-wrapper" id="gravity">
+        <img id="gravity" class="gravity" src="무중력사탕.png" alt="gravity"></div>
+        <div class="candy-wrapper" id="memory">
+        <img id="memory" class="memory" src="기억삭제사탕.png" alt="memory"></div>
+    </div>
+    <script>
+        // 사탕 이미지 요소들 가져오기
+        const clover = document.getElementById("clover");
+        const fish = document.getElementById("fish");
+        const tree = document.getElementById("tree");
+        const gravity = document.getElementById("gravity");
+        const memory = document.getElementById("memory");
+
+        clover.addEventListener("click", function() {
+            window.location.href = "clover_page.html"; // 클로버 페이지로 이동
+        });
+
+        fish.addEventListener("click", function() {
+            window.location.href = "fish_page.html"; // 물고기 사탕 페이지로 이동
+        });
+
+        tree.addEventListener("click", function() {
+            window.location.href = "tree_page.html"; // 생명 나무 사탕 페이지로 이동
+        });
+
+        gravity.addEventListener("click", function() {
+            window.location.href = "gravity_page.html"; // 무중력 사탕 페이지로 이동
+        });
+
+        memory.addEventListener("click", function() {
+            window.location.href = "memory_page.html"; // 기억 삭제 사탕 페이지로 이동
+        });
+
+// 각 사탕 이미지에 마우스 진입 이벤트 리스너 추가
+candies.forEach(candy => {
+    candy.addEventListener("mouseenter", function() {
+        candy.classList.add('hovered');
+    });
+});
+
+// 각 사탕 이미지에 마우스 이탈 이벤트 리스너 추가
+candies.forEach(candy => {
+    candy.addEventListener("mouseleave", function() {
+        candy.classList.remove('hovered');
+    });
+});
+
+// 다른 요소의 확대 제거
+document.addEventListener("mouseover", function(event) {
+    if (!event.target.classList.contains('candy')) {
+        candies.forEach(candy => {
+            candy.classList.remove('hovered');
+        });
+    }
+});
+const candyWrappers = document.querySelectorAll('.candy-wrapper');
+
+        // 각 사탕 이미지에 클릭 이벤트 리스너 추가
+        candyWrappers.forEach(wrapper => {
+            const candy = wrapper.querySelector('.candy');
+            wrapper.addEventListener("click", function() {
+                window.location.href = `${candy.id}_page.html`; // 해당 사탕 페이지로 이동
+            });
+
+            // 마우스 진입 이벤트 리스너 추가
+            wrapper.addEventListener("mouseenter", function() {
+                candy.classList.add('hovered');
+            });
+
+            // 마우스 이탈 이벤트 리스너 추가
+            wrapper.addEventListener("mouseleave", function() {
+                candy.classList.remove('hovered');
+            });
+        });
+
+        // 다른 요소의 확대 제거
+        document.addEventListener("mouseover", function(event) {
+            if (!event.target.classList.contains('candy')) {
+                candyWrappers.forEach(wrapper => {
+                    wrapper.querySelector('.candy').classList.remove('hovered');
+                });
+            }
+        });
+
+    </script>
+</body>
+</html>
