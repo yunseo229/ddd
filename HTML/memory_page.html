@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Page</title>
+    <link rel="stylesheet" href="memory_page.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="left-wrap">
+            <img id="memory" class="memory" src="memorycandy.png" alt="memory">
+            <img src="goback.png" class="backButton" id="backButton" style="cursor:pointer;">
+        </div>
+        <div class="right-wrap">
+            <div class="box1">
+                <div class="title-wrap"> 
+                    <img src="Souv.png">
+                </div>
+                <div class="box2">
+                    <div>
+                        <p>Are you having trouble sleeping because of memories <br>you want to forget? Eating just one candy can make you <br> forget everything completely!</p>
+                        <div class="box3" style="display: none;">
+                            <h2>Ingredients </h2>
+                            <ul>
+                                <li>Half a forgetfulness fruit</li>
+                                <li>One spoonful of fairy dust</li>
+                                <li>Forget-me-nots</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <img id="forget" class="forget" src="forget.png" alt="forget">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const backButton = document.getElementById("backButton");
+        
+        backButton.addEventListener("click", function() {
+            window.location.href = "page2.html"; 
+        });
+    </script>
+    <script src="memory_page.js"></script>
+</body>
+</html>

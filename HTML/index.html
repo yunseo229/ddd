@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corner Candy Shop</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        /* CSS에서 커서 스타일 정의 */
+        .element {
+            cursor: url('custom_cursor.png'), auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="image main-image" src="mainimage.png" alt="Main Image">
+        <img id="button-image" class="button-image" src="Button.png" alt="button-image">
+        <img id="candy1image" class="candy1image rotate-element" src="mintcandy.png" alt="candy1image">
+        <img id="candy2image" class="candy2image rotate-element" src="pinkcandy.png" alt="candy2image">
+    </div>
+
+    <script>
+        // 버튼 이미지 요소 가져오기
+        const buttonImage = document.getElementById("button-image");
+
+        buttonImage.addEventListener("click", function() {
+    // 클릭 시 다른 페이지로 이동
+    window.location.href = "page2.html";
+});
+ // candy1-image 요소 가져오기
+ const candy1image = document.getElementById("candy1image");
+        // candy2-image 요소 가져오기
+        const candy2Image = document.getElementById("candy2image");
+
+        // 회전 애니메이션 적용
+        candy1Image.style.animation = "rotate 5s linear infinite";
+        candy2Image.style.animation = "rotate 7s linear infinite";
+
+    </script>
+</body>
+</html>
+
+

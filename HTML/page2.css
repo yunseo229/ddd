@@ -1,0 +1,156 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+@keyframes blink {
+    0% { opacity: 1; } /* 시작 시 보이기 */
+    50% { opacity: 0; } /* 절반 시간 동안 숨기기 */
+    100% { opacity: 1; } /* 다시 보이기 */
+  }
+  
+.clickcandies {
+    /* clickcandies 이미지에 호버 효과 적용되지 않도록 */
+    pointer-events: none;
+    position: absolute;
+    top: 1%;
+    left: 50%;
+    transform: translateX(-45%);
+    width: 50%;
+    animation: blink 2s infinite; /* 1초 간격으로 무한 반복 */
+}
+.homeButton {
+    position: absolute;
+    top: 7%;
+    left: 3%;
+    width: 15%;
+    transition: transform 0.3s ease; /* 변화에 대한 transition 효과 추가 */
+}
+
+.homeButton:hover {
+    transform: scale(1.2); /* 호버 시 이동과 함께 크기 변화 */
+}
+
+img {
+    position: absolute;
+    width: 25%; 
+    height: auto;
+    transition: transform 0.5s; /* 트랜지션 효과 추가 */
+}
+
+/* 배경 이미지에 대한 스타일 */
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 배경 이미지가 부모 요소를 완전히 채우도록 설정 */
+}
+/* 마우스 호버 시 요소 확대 */
+img:not(.background):hover {
+    transform: scale(1.2); /* 요소를 1.2배 확대 */
+    z-index: 1; /* 다른 요소 위로 올리기 */
+}
+
+
+/* 예시: clover 이미지를 좌측 상단에 배치 */
+.clover {
+    top: 10%;
+    left: 10%;
+}
+
+/* 예시: fish 이미지를 우측 상단에 배치 */
+.fish {
+    top: 10%;
+    right: 10%;
+}
+
+/* 예시: tree 이미지를 좌측 하단에 배치 */
+.tree {
+    bottom: 10%;
+    left: 10%;
+}
+
+/* 예시: gravity 이미지를 우측 하단에 배치 */
+.gravity {
+    bottom: 10%;
+    right: 10%;
+}
+
+/* 예시: memory 이미지를 가운데에 배치 */
+.memory {
+    bottom: 10%;
+    right: 10%;
+}
+/* 애니메이션 키프레임 정의 */
+@keyframes move-clover {
+    0% { top: 10%; left: 10%; }
+    25% { top: 30%; left: 25%; }
+    50% { top: 50%; left: 50%; }
+    75% { top: 30%; left: 25%; }
+    100% { top: 10%; left: 10%; }
+}
+
+@keyframes move-fish {
+    0% { top: 70%; right: 80%; }
+    25% { top: 50%; right: 70%; }
+    50% { top: 30%; right: 50%; }
+    75% { top: 50%; right: 70%; }
+    100% { top: 70%; right: 80%; }
+}
+
+@keyframes move-tree {
+    0% { bottom: 70%; left: 48%; }
+    25% { bottom: 60%; left: 75%; }
+    50% { bottom: 50%; left: 50%; }
+    75% { bottom: 60%; left: 75%; }
+    100% { bottom: 70%; left: 48%; }
+}
+
+@keyframes move-gravity {
+    0% { bottom: 55%; right: 5%; }
+    25% { bottom: 30%; right: 25%; }
+    50% { bottom: 70%; right: 80%; }
+    75% { bottom: 10%; right: 10%; }
+    100% { bottom: 55%; right: 5%; }
+}
+
+@keyframes move-memory {
+    0% { top: 80%; left: 80%; }
+    25% { top: 60%; left: 60%; }
+    50% { top: 40%; left: 40%; }
+    75% { top: 60%; left: 60%; }
+    100% { top: 80%; left: 80%; }
+}
+
+#clover {
+    animation: move-clover 10s linear infinite;
+}
+
+#fish {
+    animation: move-fish 10s linear infinite;
+}
+
+#tree {
+    animation: move-tree 10s linear infinite;
+}
+
+#gravity {
+    animation: move-gravity 10s linear infinite;
+}
+
+#memory {
+    animation: move-memory 10s linear infinite;
+}
+

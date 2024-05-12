@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gravity Page</title>
+    <link rel="stylesheet" href="gravity_page.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="left-wrap">
+            <img id="gravity" class="gravity" src="gravitycandy.png" alt="gravity">
+            <img src="goback.png" class="backButton" id="backButton" style="cursor:pointer;">
+        </div>
+        <div class="right-wrap">
+            <div class="box1">
+                <div class="title-wrap"> 
+                <img src="camm.png">
+                </div>
+                <div class="box2">
+                    <div>
+                    <p>"You can transform into anyone you want for a day!"<br> Don't you want to live as someone else?</p>
+                    <div class="box3" style="display: none;">
+                    <h2>Ingredients </h2>
+                    <ul>
+                        <li>A fragment of the witch's aurora light mirror</li>
+                        <li>One acai berry</li>
+                        <li>One rose petal.</li>
+                    </ul>
+                </div>
+                </div>
+                <div>
+                    <img id="petal" class="petal" src="petal.png" alt="petal">
+                </div>
+            </div>
+            </div>
+            </div>
+            <div>
+                <script>
+                    const backButton = document.getElementById("backButton");
+                    
+                    backButton.addEventListener("click", function() {
+                        window.location.href = "page2.html"; 
+                    });
+                </script></div>
+                <script src="gravity_page.js"></script>
+</body>
+</html>
