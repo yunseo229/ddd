@@ -19,7 +19,7 @@ body{
 
 .memory {
     top: 10%;
-    left: 10%;
+    left: 9%;
     position: absolute;
     width: 30%; 
     height: auto;
@@ -28,11 +28,11 @@ body{
 }
 
 @keyframes move-memory{
-    0% { top: 10%; left: 5%; }
-    25% { top: 30%; left: 5%; }
-    50% { top: 50%; left: 5%; }
-    75% { top: 30%; left: 5%; }
-    100% { top: 10%; left: 5%; }
+    0% { top: 10%; left: 9%; }
+    25% { top: 30%; left: 9%; }
+    50% { top: 50%; left: 9%; }
+    75% { top: 30%; left: 9%; }
+    100% { top: 10%; left: 9%; }
 }
 
 .left-wrap {
@@ -79,17 +79,22 @@ body{
 .title-wrap img {
 width: 105%;
 }
+.title-wrap img {
+    width: 105%;
+    position: relative;
+    top: 60px;}
+
 .box1 {
     text-align: left; /* 내부 텍스트를 왼쪽 정렬합니다. */
     margin: auto; /* 가운데 정렬 */
 }
 
 .box2 {
-        margin-top: 130px; /* box2를 아래로 이동시키는 값 */
+        margin-top: 400px; /* box2를 아래로 이동시키는 값 */
         background-color: #ffffae;
         height: 400px;
         border-radius: 70px;
-        padding: 43px 90px;
+        padding: 70px 90px;
         width: 90%;
         padding-bottom: 5px;
     }
@@ -99,15 +104,15 @@ width: 105%;
     font-size: 24px; /* 제목의 글꼴 크기 지정 */
     line-height: 1.5; /* 원하는 행간 값으로 설정합니다. */
     margin-top: 10px; /* 제목 아래 여백 조정 */
-    margin-bottom: 32px; /* 제목 아래 여백 조정 */
+    margin-bottom: 40px; /* 제목 아래 여백 조정 */
 color: #74ca7c;}
 
 
 .forget {
     position: absolute;
-    top: 50%;
-    left: 78%;
-    width: 25%;
+    top: 24%;
+    left: 60%;
+    width: 23%;
     animation: blinkAnimation 2s infinite alternate;
 }
 
@@ -125,7 +130,7 @@ color: #74ca7c;}
 
 .box2 h2 {
     font-size: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
     color: #f36eb7;
 }
 
@@ -137,7 +142,7 @@ color: #74ca7c;}
 
 .box2 ul li {
     font-size: 22px;
-    margin-bottom: 3px;
+    margin-bottom: 9px;
     color: #f36eb7;
 }
 
@@ -161,3 +166,7 @@ body {
     font-family: 'Matolha-Regular', sans-serif; /* 서체를 적용할 요소를 선택하고, 서체 이름을 지정합니다. */
 }
 
+html{ cursor: url(cusor_custom.png),default;}
+
+/* Start https://www.cursors-4u.com */ * {cursor: url(https://cur.cursors-4u.net/holidays/hol-5/hol423.cur), auto !important;} /* End https://www.cursors-4u.com */
+/* Start https://www.cursors-4u.com */ * {cursor: url(https://cur.cursors-4u.net/food/foo-6/foo520.cur), auto !important;} /* End https://www.cursors-4u.com */
